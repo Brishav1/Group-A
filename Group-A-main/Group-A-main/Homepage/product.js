@@ -10,3 +10,11 @@ $(document).ready(function () {
     $("#productDetail").fadeIn();
   });
 });
+$(".product-card").on("click", function () {
+  const name = $(this).data("name");
+  if (name === "Smartphone") {
+    window.location.href = "smartphones.html";
+    return;
+  }
+  ...
+});
