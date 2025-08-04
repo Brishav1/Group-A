@@ -1,2 +1,3 @@
 # Group-A
-Academy by AI
+Electrodeals
+
