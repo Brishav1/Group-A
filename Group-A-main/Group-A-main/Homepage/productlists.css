@@ -1,43 +1,53 @@
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
-  margin-top: 40px;
-  justify-items: center;
+  margin-top: 50px;
+  padding: 0 20px;
 }
 
 .phone-item {
   background-color: #ffffff;
-  border-radius: 12px;
+  border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 20px;
+  padding: 25px 20px;
   text-align: center;
+  width: 260px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 300px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
 }
+
+.phone-item:nth-child(1) { animation-delay: 0.1s; }
+.phone-item:nth-child(2) { animation-delay: 0.2s; }
+.phone-item:nth-child(3) { animation-delay: 0.3s; }
+.phone-item:nth-child(4) { animation-delay: 0.4s; }
 
 .phone-item:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .phone-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin-bottom: 12px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  object-fit: cover;
 }
 
 .phone-item h3 {
-  margin: 12px 0 6px;
+  margin: 10px 0 6px;
   color: #0d47a1;
+  font-size: 1.2rem;
 }
 
 .phone-item p {
-  color: #333;
   font-size: 0.95rem;
-  margin-bottom: 12px;
+  color: #333;
+  margin-bottom: 14px;
 }
 
 .phone-item button {
@@ -46,26 +56,19 @@
   border: none;
   padding: 10px 18px;
   border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .phone-item button:hover {
   background-color: #0d47a1;
 }
 
-/* Animation */
+/* Entry Animation */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.phone-item.animated {
-  animation: fadeInUp 0.7s ease forwards;
 }
