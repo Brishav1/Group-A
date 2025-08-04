@@ -15,14 +15,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   max-width: 300px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
 }
-
-.phone-item:nth-child(2) { animation-delay: 0.2s; }
-.phone-item:nth-child(3) { animation-delay: 0.4s; }
-.phone-item:nth-child(4) { animation-delay: 0.6s; }
 
 .phone-item:hover {
   transform: translateY(-10px) scale(1.03);
@@ -61,9 +54,18 @@
   background-color: #0d47a1;
 }
 
+/* Animation */
 @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.phone-item.animated {
+  animation: fadeInUp 0.7s ease forwards;
 }
