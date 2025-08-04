@@ -21,30 +21,38 @@
 
   <div class="container">
     <h2>Explore Our Featured Products</h2>
-    <p class="description">Hover over a product to learn more. Click to view details.</p>
+    <p class="description">Click a category to see available models.</p>
 
-    <div class="products">
-      <div class="product-card" data-name="Smartphone" data-price="$299" data-desc="High-speed performance with AMOLED display.">
+    <div class="products-grid">
+      <div class="product-card" data-name="Smartphone" onclick="window.location.href='smartphones.html'">
         <img src="phone.jpg" alt="Smartphone">
-        <h3>Smartphone</h3>
+        <h3>Smartphones</h3>
       </div>
 
-      <div class="product-card" data-name="Laptop" data-price="$799" data-desc="Powerful performance for work and play.">
+      <div class="product-card" data-name="Laptop">
         <img src="laptop.jpg" alt="Laptop">
-        <h3>Laptop</h3>
+        <h3>Laptops</h3>
       </div>
 
-      <div class="product-card" data-name="Headphones" data-price="$59" data-desc="Comfortable fit with crystal-clear sound.">
+      <div class="product-card" data-name="Headphones">
         <img src="headphone.jpg" alt="Headphones">
         <h3>Headphones</h3>
       </div>
-    </div>
 
-    <div class="product-detail" id="productDetail">
-      <h3 id="detailName">Product Name</h3>
-      <p id="detailPrice"></p>
-      <p id="detailDesc"></p>
-      <button onclick="document.getElementById('productDetail').style.display='none'">Close</button>
+      <div class="product-card" data-name="Earbuds">
+        <img src="earbud.jpg" alt="Earbuds">
+        <h3>Earbuds</h3>
+      </div>
+
+      <div class="product-card" data-name="Mouse">
+        <img src="mouse.jpg" alt="Mouse">
+        <h3>Mice</h3>
+      </div>
+
+      <div class="product-card" data-name="Keyboard">
+        <img src="keyboard.jpg" alt="Keyboard">
+        <h3>Keyboards</h3>
+      </div>
     </div>
   </div>
 
