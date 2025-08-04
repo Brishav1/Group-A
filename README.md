@@ -1,3 +1,0 @@
-# Group-A
-Electrodeals
-
