@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check All Checkboxes</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h3>Select your hobbies:</h3>
+  <label><input type="checkbox" name="hobby" value="Reading"> Reading</label><br>
+  <label><input type="checkbox" name="hobby" value="Music"> Music</label><br>
+  <label><input type="checkbox" name="hobby" value="Traveling"> Traveling</label><br><br>
+
+  <button>Check All</button>
+
+  <script>
+    $(document).ready(function(){
+      // Check all the checkboxes
+      $("button").click(function(){
+        $('input[type="checkbox"]').attr("checked", "checked");
+      });
+    });
+  </script>
+
+</body>
+</html>

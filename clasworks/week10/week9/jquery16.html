@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Image</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        img {
+            position: relative; /* Required for 'left' animation */
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <button>Move Image</button>
+    <br><br>
+    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=400" alt="Sample Image">
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("img").animate({
+                    left: 300
+                }, 1000); 
+            });
+        });
+    </script>
+
+</body>
+</html>

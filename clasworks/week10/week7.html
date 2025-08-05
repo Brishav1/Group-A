@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Calculator</title>
+</head>
+<body>
+    <h1>Power Calculator</h1>
+    <p>Calculates x<sup>n</sup> (x multiplied by itself n times)</p>
+    
+    <button onclick="calculatePower()">Calculate Power</button>
+    <div id="result"></div>
+
+    <script>
+        function pow(x, n) {
+            // Validate that n is a natural number (integer >= 1)
+            if (!Number.isInteger(n) || n < 1) {
+                return "Error: n must be a natural number (integer ≥ 1)";
+            }
+            
+            let result = 1;
+            for (let i = 0; i < n; i++) {
+                result *= x;
+            }
+            return result;
+        }
+
+        function calculatePower() {
+            const x = parseFloat(prompt("Enter the base (x):", ""));
+            const n = parseInt(prompt("Enter the exponent (n, natural number ≥ 1):", ""));
+            
+            if (isNaN(x) || isNaN(n)) {
+                document.getElementById("result").textContent = "Please enter valid numbers!";
+                return;
+            }
+            
+            const result = pow(x, n);
+            document.getElementById("result").innerHTML = 
+                `${x}<sup>${n}</sup> = ${result}`;
+        }
+               /*1-- let i = 3;
+       while(i) {
+        alert(i--);
+       }
+        2-- let i=0;
+        while (++i <5) alert(i);
+        3-- let i=0;
+        while (++i, i <20){
+            if(i%2 == 0){
+            alert(i);
+            }
+        }
+       4-- let i = 0
+       while(i++, i < 3){
+        alert(i);
+       }
+        let n = (prompt("enter a number"));
+        while(i){
+            if(i = 100){
+                alert(i);
+            }else{
+                prompt("enter another number");
+            }
+        }*/
+   </script>
+</body>
+</html>
+    </script> 
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        /*let fruits = ["apple", "banana", "cherry"];
+        var i=0;
+        fruits.push("date");
+        fruits.push("elderberry");
+        shiftFruit = fruits.shift(); // Removes the first element
+        fruits.unshift("fig"); // Adds a new first element
+        fruits.splice(2, 1); // Removes the third element (cherry)
+        for (i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + "<br>");
+        }
+        while (fruits.length > 0) {
+            let fruit = fruits.pop(); // Removes the last element
+            document.write("Removed: " + fruit + "<br>");
+        }
+
+       do {
+            document.write("Current fruit: " + fruits[i] + "<br>");
+            i++;
+        } while (i < fruits.length);
+        
+        // Using forEach to iterate over the array
+        fruits.forEach(function(fruit) {
+            document.write("Fruit: " + fruit + "<br>");
+        });
+        while (i < fruits.length) {
+            document.write("Remaining fruit: " + fruits[i] + "<br>");
+            i++;
+        } 
+        */
+        var pass, fail;
+        let marks = [85, 90, 78, 92, 88];
+        for (let j = 0; j < marks.length; j++) {
+            if (marks[j] >= 80) {
+                pass = marks[j];
+            } else {
+                fail = marks[j];
+            }
+        }
+        document.write("Marks: " + marks.join(", ") + "<br>");
+        document.write("Total marks: " + marks.length + "<br>");
+        document.write("Highest mark: " + Math.max(...marks) + "<br>");
+        document.write("Lowest mark: " + Math.min(...marks) + "<br>");
+        document.write("Passed marks: " + pass + "<br>");
+        document.write("Failed marks: " + fail + "<br>");
+    </script>
+</body>
+</html>

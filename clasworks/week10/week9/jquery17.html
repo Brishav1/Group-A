@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Moving Image</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden; /* No scrollbars */
+        }
+        img {
+            position: absolute;
+            width: 200px;
+            height: auto;
+            top: 50px;
+            left: -250px; /* Start off-screen */
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=400" alt="Sample Image">
+
+    <script>
+        $(document).ready(function moveImage(){     
+                var screenWidth = $(window).width();
+                var imgWidth = $("img").width();
+
+                $("img").css({left: -imgWidth}) 
+                    .animate({left: screenWidth}, 4000, "linear", moveImage);
+            
+        });
+    </script>
+
+</body>
+</html>
