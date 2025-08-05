@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery .empty() Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .container {
+      border: 2px solid #333;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <button>Empty the Container</button>
+
+  <div class="container">
+    <h3>Content inside container</h3>
+    <p>This text will be removed when you click the button.</p>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      // Empty the content of elements with class 'container'
+      $("button").click(function(){
+        $(".container").empty();
+      });
+    });
+  </script>
+
+</body>
+</html>

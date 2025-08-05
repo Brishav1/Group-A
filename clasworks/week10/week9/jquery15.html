@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Paragraphs</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <p class="normal">This is a normal toggle paragraph.</p>
+    <p class="fast">This is a fast toggle paragraph.</p>
+    <p class="slow">This is a slow toggle paragraph.</p>
+    <p class="very-fast">This is a very fast toggle paragraph (50ms).</p>
+    <p class="very-slow">This is a very slow toggle paragraph (2000ms).</p>
+
+    <button class="toggle-btn">Toggle Paragraphs</button>
+
+    <script>
+        $(document).ready(function(){
+            $(".toggle-btn").click(function(){
+                $("p.normal").toggle();
+                $("p.fast").toggle("fast");
+                $("p.slow").toggle("slow");
+                $("p.very-fast").toggle(50);
+                $("p.very-slow").toggle(2000);
+            });
+        });
+    </script>
+
+</body>
+</html>

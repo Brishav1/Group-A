@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Prepend Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <p>This is the first paragraph.</p>
+  <p>This is the second paragraph.</p>
+
+  <div id="container">
+    <p>Container content starts here.</p>
+  </div>
+
+  <button>Prepend to Container</button>
+
+  <script>
+    $(document).ready(function(){
+      // Prepend to all paragraphs
+      $("p").prepend("<strong>Note:</strong> ");
+
+      // Prepend to #container when button is clicked
+      $("button").click(function(){
+        $("#container").prepend("This is demo text.");
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Power Calculator</h1>
+    <p>Calculates x<sup>n</sup> (x multiplied by itself n times)</p>
+    
+    <button onclick="calculatePower()">Calculate Power</button>
+    <div id="result"></div>
+
+    <script>
+        function pow(x, n) {
+            // Validate that n is a natural number (integer >= 1)
+            if (!Number.isInteger(n) || n < 1) {
+                return "Error: n must be a natural number (integer ≥ 1)";
+            }
+            
+            let result = 1;
+            for (let i = 0; i < n; i++) {
+                result *= x;
+            }
+            return result;
+        }
+
+        function calculatePower() {
+            const x = parseFloat(prompt("Enter the base (x):", ""));
+            const n = parseInt(prompt("Enter the exponent (n, natural number ≥ 1):", ""));
+            
+            if (isNaN(x) || isNaN(n)) {
+                document.getElementById("result").textContent = "Please enter valid numbers!";
+                return;
+            }
+            
+            const result = pow(x, n);
+            document.getElementById("result").innerHTML = 
+                `${x}<sup>${n}</sup> = ${result}`;
+        }
+    </script>
+</body>
+</html>
+    </script> 
+</body>
+</html>

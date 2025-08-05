@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Example2</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p id="mark">Hello World</p><br>
+    <p class="mark">Hello Students</p><br>
+    Name:<input type="text"/>
+  <script>
+    $(document).ready(function() {
+        $('p.mark').css({
+        "background":"blue",
+        "display": "inline"});
+        
+        $('p#mark').css({
+        "background":"purple",
+        "display": "inline"});
+        
+        $('input[type="text"]').css({
+            "background":"red",
+            "display": "inline"});
+    });
+  </script>
+</body>
+</html>

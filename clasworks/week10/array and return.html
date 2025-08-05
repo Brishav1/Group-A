@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function average(a){
+            sum=0;
+            for(i=0;i<a.length;i++){
+                sum = sum+a[i];
+                
+            }
+            av = sum/a.length;
+            return av;
+        }
+    function main(){    
+    a=[34,56,78,90];
+    c=[34,56,100,95];
+    av= average(a);
+    document.write("The average: " + av+"<br>");
+    avr=average (c);
+    document.write("The Average:"+avr);
+    
+    }
+    main();
+    </script>
+</body>
+</html>

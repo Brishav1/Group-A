@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery .remove(".hint") Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <p>This paragraph will stay.</p>
+  <p class="hint">This hint paragraph will be removed.</p>
+  <p class="hint">Another hint to be removed.</p>
+  <p>This one will also stay.</p>
+
+  <button>Remove Only Hint Paragraphs</button>
+
+  <script>
+    $(document).ready(function(){
+      // Removes paragraphs with class "hint" from the DOM
+      $("button").click(function(){
+        $("p").remove(".hint");
+      });
+    });
+  </script>
+
+</body>
+</html>

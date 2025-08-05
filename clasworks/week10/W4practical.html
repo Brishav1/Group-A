@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sum Calculator</title>
+</head>
+<body>
+  <label>X: </label>
+  <input type="number" id="X" required>
+  <label>Y: </label>
+  <input type="number" id="Y" required>
+  <button onclick="calculateSum()">calculate</button>
+
+  <script>
+    function calculateSum() {
+      const X = parseFloat(document.getElementById('X').value);
+      const Y = parseFloat(document.getElementById('Y').value);
+      const Z = X * Y;
+      console.log("Z =", Z);
+      document.write("Z: " + Z);
+    }
+  </script>
+</body>
+</html>

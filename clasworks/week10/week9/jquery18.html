@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            border: 2px solid black;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <button>Animate Box</button>
+    <br><br>
+    <div class="box"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".box")
+                    .animate({width: "300px"})
+                    .animate({height: "300px"})
+                    .animate({marginLeft: "150px"})
+                    .animate({borderWidth: "10px"})
+                    .animate({opacity: .3});
+            });
+        });
+    </script>
+
+</body>
+</html>
