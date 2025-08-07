@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ElectroDeals - Product Page</title>
+  <link rel="stylesheet" href="homestyle.css" />
+  <link rel="stylesheet" href="productstyle.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <h1>ElectroDeals</h1>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="deals.html">Best Deals</a></li>
+      <li><a href="about us.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Explore Our Featured Products</h2>
+    <p class="description">Click a category to see available models.</p>
+
+    <div class="products-grid">
+      <div class="product-card" data-name="Smartphone" onclick="window.location.href='smartphones.html'">
+        <img src="phone.jpg" alt="Smartphone">
+        <h3>Smartphones</h3>
+      </div>
+
+      <div class="product-card" data-name="Laptop">
+        <img src="laptop.jpg" alt="Laptop">
+        <h3>Laptops</h3>
+      </div>
+
+      <div class="product-card" data-name="Headphones">
+        <img src="headphone.jpg" alt="Headphones">
+        <h3>Headphones</h3>
+      </div>
+
+      <div class="product-card" data-name="Earbuds">
+        <img src="earbud.jpg" alt="Earbuds">
+        <h3>Earbuds</h3>
+      </div>
+
+      <div class="product-card" data-name="Mouse">
+        <img src="mouse.jpg" alt="Mouse">
+        <h3>Mice</h3>
+      </div>
+
+      <div class="product-card" data-name="Keyboard">
+        <img src="keyboard.jpg" alt="Keyboard">
+        <h3>Keyboards</h3>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 ElectroDeals | Product Showcase
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>
