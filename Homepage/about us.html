@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - ElectroDeals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="home-bg">
+  <nav class="sidebar">
+    <img src="logo.jpg" alt="ElectroDeals Logo" class="sidebar-logo" />
+    <h2>ElectroDeals</h2>
+    <a href="home.html"><button><i class="home.html"></i> Home</button></a>
+    <a href="smartphones.html"><button><i class="fas fa-tags"></i> Deals</button></a>
+    <a href="about us.html" class="active"><button><i class="about us.html"></i> About Us</button></a>
+    <a href="contact.html"><button><i class="contact.html"></i> Contact</button></a>
+  </nav>
+
+  <main class="main">
+    <div class="main-content"><br>
+      <h1 style="margin-bottom: 200px;">About ElectroDeals</h1>
+      <p class="large-spacing">
+        Welcome to <strong>ElectroDeals</strong> — your trusted hub for tracking the best electronics deals online.
+        Founded in 2022 by a group of tech-savvy bargain hunters, our mission is to make technology more affordable for everyone.
+      </p>
+      <p>
+        We constantly monitor major retailers like Amazon, eBay, and Walmart to bring you real-time discounts
+        on gadgets, accessories, and electronics that matter to you — phones, laptops, wearables, audio gear, and more.
+      </p>
+      <p>
+        Our platform is optimized for performance and simplicity, ensuring you can find deals fast without sifting through clutter.
+        Whether you're a student looking for a budget laptop, or a professional seeking high-end accessories on discount,
+        ElectroDeals is here to help.
+      </p>
+
+      <h2 style="margin-top: 30px; color: #00ffff;">Our Commitment</h2>
+      <p>
+        We believe in transparency, user trust, and quality content. No pop-ups. No fake discounts.
+        Just real deals, updated regularly by our team and AI-powered tools.
+      </p>
+
+      <h2 style="margin-top: 30px; color: #00ffff;">Cookies & Privacy</h2>
+      <p>
+        To give you the best experience, we use cookies to:
+        <ul style="text-align: left; margin: 10px 0 20px 30px;">
+          <li>Remember your preferences (e.g., accepted cookie banner)</li>
+          <li>Enhance page load performance</li>
+          <li>Understand user engagement through basic analytics (anonymous)</li>
+        </ul>
+        We do <strong>not</strong> sell your data or track your behavior across other websites.
+        Your privacy is our priority. You can clear cookies anytime via your browser settings.
+      </p>
+    </div>
+  </main>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to ensure you get the best experience on ElectroDeals.</p>
+    <button id="accept-cookies">Got it!</button>
+  </div>
+
+  <script>
+    // Cookie banner logic
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+      banner.style.display = 'flex';
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'true');
+      banner.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
